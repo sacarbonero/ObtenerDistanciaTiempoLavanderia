@@ -49,6 +49,8 @@
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>Emgu.Util.TypeEnum</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -113,15 +115,16 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>Emgu.CV</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1091,4478" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1091,4059" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Obtener distancia y tiempo" sap:VirtualizedContainerService.HintSize="592,4455" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Obtener distancia y tiempo" sap:VirtualizedContainerService.HintSize="624,4036" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Ubicación" />
         <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="TablaPisos" />
@@ -146,9 +149,9 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:SelectFile InitialDirectory="{x:Null}" Multiselect="{x:Null}" SelectedFiles="{x:Null}" DisplayName="Buscar archivo de direcciones" Filter="Todos los archivos |*.*" sap:VirtualizedContainerService.HintSize="558,172" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[ArchivoDirecciones]" />
-      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[ListadoDirecciones]" DisplayName="Leer libro de direcciones" sap:VirtualizedContainerService.HintSize="558,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="HipicasMadridNorte" WorkbookPath="[ArchivoDirecciones]" />
-      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="Assign_20">
+      <ui:SelectFile InitialDirectory="{x:Null}" Multiselect="{x:Null}" SelectedFiles="{x:Null}" DisplayName="Buscar archivo de direcciones" Filter="Todos los archivos |*.*" sap:VirtualizedContainerService.HintSize="590,172" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[ArchivoDirecciones]" />
+      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[ListadoDirecciones]" DisplayName="Leer libro de direcciones" sap:VirtualizedContainerService.HintSize="590,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="HipicasMadridNorte" WorkbookPath="[ArchivoDirecciones]" />
+      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="590,175" sap2010:WorkflowViewState.IdRef="Assign_20">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[IndiceBusqueda]</OutArgument>
         </Assign.To>
@@ -156,13 +159,13 @@
           <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
         </Assign.Value>
       </Assign>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome abrir google maps" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="558,3458" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b46b870c-a356-4428-9a92-b180fd4a42ab" Timeout="5" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome abrir google maps" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="590,2202" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b46b870c-a356-4428-9a92-b180fd4a42ab" Timeout="5" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="556,3255" sap2010:WorkflowViewState.IdRef="Sequence_51">
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="486,1999" sap2010:WorkflowViewState.IdRef="Sequence_51">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Pisos" />
                 <Variable x:TypeArguments="x:Int32" Default="0" Name="IndexMaximo" />
@@ -173,13 +176,13 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ListadoDirecciones]" DisplayName="Para cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="522,3139" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ListadoDirecciones]" DisplayName="Para cada fila de la tabla de datos" sap:VirtualizedContainerService.HintSize="452,1887" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd2:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="Ruta" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="520,2755" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="450,1701" sap2010:WorkflowViewState.IdRef="Sequence_44">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Origen" />
                         <Variable x:TypeArguments="x:String" Name="Distancia" />
@@ -187,6 +190,8 @@
                         <Variable x:TypeArguments="ui:UiElement" Name="UiElementDistancia" />
                         <Variable x:TypeArguments="ui:UiElement" Name="UiElementTiempo" />
                         <Variable x:TypeArguments="x:String" Name="DistanciaLimpia" />
+                        <Variable x:TypeArguments="x:Double" Name="DistanciaDouble" />
+                        <Variable x:TypeArguments="x:Double" Name="DistanciaTest" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -194,7 +199,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="486,175" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_19">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[Origen]</OutArgument>
                         </Assign.To>
@@ -203,16 +208,23 @@
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="486,123" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Estamos en la busqueda: &quot; + IndiceBusqueda.ToString + &quot; de &quot; + Origen +&quot; a &quot; + Ruta(&quot;Direccion&quot;).ToString]" />
-                      <If Condition="[IndiceBusqueda =1]" sap:VirtualizedContainerService.HintSize="486,560" sap2010:WorkflowViewState.IdRef="If_6">
+                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Estamos en la busqueda: &quot; + IndiceBusqueda.ToString + &quot; de &quot; + Origen +&quot; a &quot; + Ruta(&quot;Direccion&quot;).ToString]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </WriteLine>
+                      <If Condition="[IndiceBusqueda =1]" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="If_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -252,7 +264,7 @@
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="google.com/maps/place/La+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/@40.5376425,-3.7075352,17z/data=!3m1!4b1!4m6!3m5!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!8m2!3d40.5376385!4d-3.7049603!16s%2Fg%2F11_r3rbkb" CVScreenId="2c338949-3c53-4cb1-99bb-c65289627a0d" CvElementArea="115, 514, 46, 45" CvType="Icon" DesignTimeRectangle="129, 527, 18, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='' type='' tag='SPAN' class='Cw1rxd google-symbols NhBTye G47vBd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="f3de9df4-282b-40c3-8f60-f3de18d34e90" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADhSURBVEhLtdS9CoJQAAXg+yo+Y6NrW2/gKg0+QODWINRudDfbohAhh8BE5ISEaB7vT3E9cAaP8nG5g0L4GyxSGlyVBlelQVEvOmJ7klhHAb2bLQ0z9eIMtwafNE/sYgucBh3axwanwYT2MeE02KB9dDgNJjSXWGWv4VmFTwdCqxLyXgw9JxB+YMa/4QSHeoQCeGR7Pk3XUOLSjj6sr/B/h1PIfshTiDCFnF6VHuarILgsGDVfxQzeNqjqqTTKHKqCCVdFhepgI65DTbASN6E2MOE2qC3cdZHf5l+lwVVpcNQ3rIbJTMyJUSMAAAAASUVORK5CYII=" InformativeScreenshot="78116e32af69bbe983dca9311c4732fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='La Ponderosa - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="2c338949-3c53-4cb1-99bb-c65289627a0d" CvElementArea="115, 514, 46, 45" CvType="Icon" DesignTimeRectangle="102, 512, 73, 68" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='Cómo llegar' tag='BUTTON' type='' class='g88MCb S9kvJb ' aaname='Cómo llegar' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='&amp;#xA;Cómo llegar' /&gt;" Guid="b73c43f4-1b62-4741-a01d-4f34fbc79f29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAABICAYAAACzxHgDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAbLSURBVHhe7ZpfaFNXHMd7H4TlYYw+hj25xzzmsU8bffQhECmFG4pBri+pUsdUSpst67QPi5EwF5mUgoMasGVRBDOtKIFqWwizgS4LopgidouW0Ci2ZI2R7/jdP83NTVLbc+9Na3e+8IPce8/9nd/53PM/pwNcO1aH8QbXh8WhMYhDYxCHxiAOjUG7Dm1m6QXOpubw5fg1fP7jL/gkFIUwfF42+k33vhq/JqehtHtBuwLtabGEr39PofPcz/js7EUc+PYCOobPb2mUhtLSO/Qu+dgttRXay7dr8P92Gwe+u7AtUK2M3iUf5It8tlttgzb+x6Lc3MzAMhr5Ip/ku51qCzSqEdS0jIW2ysi3P3HbmK1tsh0adfCf/vBTQ0GtNsqD8mqHbIVGhXB8H20ooF1GebUDnG3QqLm0o4YZjfKk7sBO2QKNOmY7+7APGeVt5+BgOTSaAtCIZixIu41isGs6Yjk0eR5m4bSC1SgGu5qppdBolk6TTmMBdssoFjtWDpZCo+WNFbXs4OQ84n/mcG5yrOHZToxioZislqXQaF1oDHyndvDOMxTeqQ7frSF5xxw4islqWQaNdiDMjph1wDSZBEcxWb07Yhk02rox0zSbAtNkAhzFRLFZKcug0Z6XMeDt2pbANJkAZ/UqwTJotFloDHY7tiWwlRy+efZv7ZoRHMVmpSyDxjKhbQBWfo3cy2LN/nqAjuEx0+AoNitlGTTanjYGu7U9wNxGvY/Ss1STdOfRMZFD/r0u4cbfGDam2cIoNiu1B6EtIqfdWFlEx8Qicsbmu1+gWdE8G6C9LjYC20/N05KB4P07lDeMlHRiAEa2ZwcCGtaNwW7XjDWuqRiBkdF0yEpZBo1PbhnEl1GM4gt2BvGtIQbxTUhG8e1uBvE/VhjF/8JjFDWNXfuz2OZzHbZBI/FjCYziB2AYRc3Fzj5OPmpl00jZTG2BRuKH+hjFj4+aED+obFLakXja82p1JJ46+P/9kfiPXRwagzg0BnFoDOLQGMShMYhDYxCHxiAOjUEcGoPMQSs+QWImi7zh9I/VKjyeReKxutaU83yCgjFRG9Uc2sYKEhNhuI8G4OwPQbqZRalqTAQs/BqAMJKC3UvnZESEEEkrF/MxCJ4YksZEbVQjtLU0fH0iBH8I0mQKsYkwXD0ihJM3kKsDV0Hu0SwWivp79mjPQ7t/SYJwYqoe0PMpuDwiJDVuAlZ4nEF8OoVEeklXCxWQ95+XkM+kEJ/OYGEVwOoSktMpxOvSAqhWkMvMKn4yKyjrHum1NbQK8pqPBv8lLKTVOIqlho9c/ieLBMU1o8apSukOVlB6mkHi0XJDXAZoWRwXRRy6V6m/TRm8WUdJ7rvWkYxIEHokuAdD+KJXXwuXETkhwtEXgPNMGF1+EULfabj8AXSNhODsEdF5Oas4rC4jclKE0DuA7sEhdNKzSLppU28NTY3FH4LvYlTJ72QSeXqk+e8ZQDfl3SuhUxThm1fclOZj6PQG0BUeg+9MAIJ3CBF150nOr0+CszcAZ1D1p5MBWho+T81xUy1egcMTQuSVel1dQvCYiK6bVFwV2iUVjFpDD6eUj1C4FYJw4oYchPxbjCGpDSJrKRzySjieUa91agmNYvGGEdc2b8uzOEw+FoFyKgxB/6yYRNdm2ah2JhGb1z5RBfEREa7JZflKzu/YVSw06cdJO4aWnzy9WXBNtUIp0LTM8eIGXJ7Tm19QLrD6bh0IWYZ3dWoFTY7FewROGrBUc3iV+BvjVPxvlm3tCWIXQ3AdDcA1GEX3MQO0utjqZYBWwvigrqZoqmZxqj8Aab6C/PUhCP1TtXOxABJhEUKUqsgOoEVFCOF6aKP9ItzXV3T3FLWEJsdyFXOrJRR0Rt1IQ5xVpetRoJUwHhThGLmLHL2Tz+LUGWZoQDkdQ6dHQvdkFoUyUF5bwvg5Sanq1CPK1VzC4Wml4y4/nYLbqzXB7UNDZgwO7xCCi9REKijMUL4DCBo7EGMh9M1T9i/B91BpZuX8FNy9oxinzr54F91eEe7LaeRWl5CIDkDYbEVKnF3aB1qdhU80AY1UeDimTDM8qvlHEcmt157fi8Lp1Z4fgWssq3bgO4CGdcxNDNXy8AZw6FZj0yS1hAYgd2u0Lpau6zUfpcwVuPuOKIPWWBKndM0zPz2KTo8Ih1+Cwx+DL2QSmqIKSlR13zSOpLKqynNlRDWhjXUUVtdRbtHpbkuyD0MsG+vIZXQrB7V51qZNVDXVvHW3tqMtoH3kkkdjEc7QFOIzKQSDEoS+K5gz83FU7V9opFdpBEeG5FHVHU5iTjeBNaP9Dc0mcWgM4tAY9B8O8Mk9BngwfwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -276,7 +288,7 @@
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="google.com/maps/dir//La+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/@40.5376425,-3.7075352,17z/data=!4m18!1m8!3m7!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!2sLa+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid!3b1!8m2!3d40.5376385!4d-3.7049603!16s%2Fg%2F11_r3rbkb!4m8!1m0!1m5!1m1!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!2m2!1d-3.7049603!2d40.5376385!3e0" CVScreenId="6ade18f3-5c25-4742-b61d-7153a92acac8" CvElementArea="146, 256, 278, 34" CvType="InputBox" DesignTimeRectangle="152, 265, 230, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-label='Elige un punto de partida o haz clic en el mapa...' tag='INPUT' type='' class='tactile-searchbox-input' placeholder='Elige un punto de partida o haz clic en el mapa...' aaname='' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="25dc16b7-2db8-4df0-853d-57db0f1dcd30" InformativeScreenshot="d26a93073b9c2b1c7bb2986336838eb8.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="6ade18f3-5c25-4742-b61d-7153a92acac8" CvTextArea="107, 269, 16, 15" CvTextArgument="O" CvType="Text" DesignTimeRectangle="104, 270, 24, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='' tag='SPAN' type='' class='lECG9c M3KnKf google-symbols' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="e681730a-fc1d-4e34-9b8b-43b2af6f9a3d" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -293,7 +305,7 @@
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/La+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/@40.5319762,-3.6925006,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!2m2!1d-3.7049603!2d40.5376385!3e0" CVScreenId="f4989f20-4f1e-43c7-8d33-5748d37a772e" ContentHash="3y14AynLskOIJ12rXjaTlg" CvTextArea="150, 365, 100, 14" CvTextArgument="Añadir destino" CvType="Text" DesignTimeRectangle="152, 364, 98, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Añadir destino' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Añadir destino' /&gt;" Guid="5ded4d1a-3d3e-4963-acb0-64c3f83d062e" InformativeScreenshot="e2905d7601d9cd348e565e9600d825df.png" Reference="MhO8ZNPxh0ip9KbNq3bQ5Q/Hs8IAhQsAE6br46yFMb1Pg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a La Ponderosa - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="f4989f20-4f1e-43c7-8d33-5748d37a772e" CvTextArea="109, 365, 141, 14" CvTextArgument="+ Añadir destino" CvType="Text" DesignTimeRectangle="80, 353, 408, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Añadir destino' tag='BUTTON' type='' class='fC7rrc xiw3Pd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='&amp;#xA;Añadir destino' /&gt;" Guid="0b87ea19-3ca5-462b-9db9-4af37759a155" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -304,7 +316,7 @@
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/La+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/@40.5319762,-3.6925006,14z/data=!4m14!4m13!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!2m2!1d-3.7049603!2d40.5376385!3e0" CVScreenId="9971d89f-481c-4a16-9147-bf7706500de8" ContentHash="hhtLR1C2rEKx9yJNaCRZTQ" CvTextArea="152, 365, 231, 17" CvTextArgument="Elige un destino o haz clic en el map" CvType="Text" DesignTimeRectangle="152, 361, 230, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-label='Elige un destino o haz clic en el mapa...' tag='INPUT' type='' class='tactile-searchbox-input' placeholder='Elige un destino o haz clic en el mapa...' aaname='' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="395e3735-edc2-47bd-9c24-6a838db825d8" InformativeScreenshot="0345b3e9ae7956b237837bf15732ebc1.png" IsResponsive="True" Reference="MhO8ZNPxh0ip9KbNq3bQ5Q/OQfRa8Y_CkSmXLM_h65cXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a La Ponderosa - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="9971d89f-481c-4a16-9147-bf7706500de8" CvElementArea="106, 363, 19, 22" CvType="Icon" DesignTimeRectangle="104, 364, 24, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='' type='' tag='SPAN' class='lECG9c LIqice google-symbols' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="230705dc-8135-4033-ba34-5f34da12af58" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGySURBVEhL3ZQ9S8NQGIX7i0QctHSwIIiLSHGwOlgFFXEQXBxdBBfBwUWwUPEfOCiCiKA4iIuIHwjSVu2HpbUtNm1tbJseORdSNGjujUURH3jhzXtOcnKTm7jwy7isg5/m7wcaWgGVi3O8nJ6I3inKga/hW8QDwwh3tn0ozqipohRYOjxAtMeDiLcL6cUFaLs7othzRo0eFaSBtdQjHgb7cT/QB/3m2iqLGTV66JUhDcyH1hHxdKC4vyeOjWIRueCaKPaEGj30yrANbOg6krPTiA35UM/nYJRLSM5MNN8fe86o0UMvz7HDNpAXS0yNiWJfy6TF4zMD2XNm9dlhG2iuMD7qh1F4/nKF1OhpeYUku7qCqNeNyvmZOP7sHVKjh14Z0kD96lJs+9T8HBrVqlUWM2rvb8oOaSAaDWSWlxB2t0Pb3rKqYkaNHnplyAMB1LNPiPl9uOvtFr81E/acUaNHBaVAYl48MRmAoWmi2FtvQoZyIMlvhsTjMzcN+/xGUOlRmjgKNL83/lVYKt+dFUeBpHx81Axk7xTHgXx38fERUeyd4jiQcEeq7kor3wpshf8f+AZLAPMrliowBQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -326,7 +338,7 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/Centro+h%C3%ADpico+MIDIMAR,+3+de+la,+Camino+de+Montecarmelo+70,+Carr.+de+El+Pardo+a+Fuencarral,+kil%C3%B3metro+3,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/@40.5222894,-3.7159005,13z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422a1aa248c4c7:0x2a8e6b84690c8b3f!2m2!1d-3.7323948!2d40.502837!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="8b632b5b-9552-43cc-95b0-2699eb16482e" CvElementArea="177, 378, 353, 53" CvTextArea="187, 395, 320, 17" CvTextArgument="Centro hípico MIDIMAR, 3 de la, Camino" CvType="Button" DesignTimeRectangle="189, 390, 330, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-label='Destino Centro hípico MIDIMAR, 3 de la, Camino de Montecarmelo 70, Carr. de El Pardo a Fuencarral, kilómetro 3, 28049 Madrid' tag='INPUT' type='' class='tactile-searchbox-input' aaname='' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="b3e13c0e-014f-49a2-9c69-fde07cf7ff1c" InformativeScreenshot="09b464e730423f49e1fde74aca95c582.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="129, 396, 30, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='' idx='2' tag='SPAN' /&gt;" Guid="9b0a7952-75ed-4b3b-8ff9-07b61d9eb7d1" SearchSteps="Selector" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -336,71 +348,131 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <uix:NGetText DisplayName="Obtener etiqueta de tiempo" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,143" sap2010:WorkflowViewState.IdRef="NGetText_5" OutUiElement="[UiElementTiempo]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" ScrapingOptions="None" Version="V5">
+                      <uix:NGetText DisplayName="Obtener etiqueta de tiempo" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="NGetText_5" OutUiElement="[UiElementTiempo]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" ScrapingOptions="None" Version="V5">
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/@40.5314763,-3.7026211,13z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe4970ca3f:0x192a888d7366a85!2m2!1d-3.7043174!2d40.5377446!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="55123ac2-e159-4832-b088-d6036b98600c" DesignTimeRectangle="518, 736, 61, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='section-directions-trip-0' tag='DIV' type='' class='Fk3sm fontHeadlineSmall bKVTGe' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="c6047d0b-d8cf-41fd-ae47-cfb509625ea4" InformativeScreenshot="c276cb1adc3ee8ba59329bb8dc43cdf6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CVScreenId="55123ac2-e159-4832-b088-d6036b98600c" DesignTimeRectangle="129, 736, 30, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='img' tag='SPAN' type='' class='Os0QJc google-symbols' aaname='' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='' /&gt;" Guid="f0bdf972-3c0b-458c-9ad8-ab875bb5cb5c" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NGetText.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
-                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DelayAfter="1" DisplayName="Obtener valor tiempo" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,238" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" InUiElement="[UiElementTiempo]" Result="[Tiempo]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
+                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DelayAfter="1" DisplayName="Obtener valor tiempo" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" InUiElement="[UiElementTiempo]" Result="[Tiempo]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
                         <uix:NGetAttributeGeneric.Target>
                           <uix:TargetAnchorable BrowserURL="google.com/maps/place/Peluquer%C3%ADa+Easy+Look+(Las+Tablas)/@40.5054645,-3.7033657,13z/data=!4m10!1m2!2m1!1speluqueria+alcobendas!3m6!1s0xd422b6c3b9e92ad:0x4dcd5bec42c1d90e!8m2!3d40.5024679!4d-3.6761276!15sChVwZWx1cXVlcmlhIGFsY29iZW5kYXNaFyIVcGVsdXF1ZXJpYSBhbGNvYmVuZGFzkgESdW5pc2V4X2hhaXJkcmVzc2VymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5QTkZwSFMzVlJSUkFC4AEA-gEECAAQOw!16s%2Fg%2F11twqg3_1_" CVScreenId="a06fa9f5-6539-48eb-b98c-935ef1d5c09a" CvTextArea="532, 448, 325, 24" CvTextArgument="Peluqueria Easy Look (Las Tablas)" CvType="Text" DesignTimeRectangle="532, 445, 354, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='3' tag='H1' /&gt;" Guid="336b7636-2c96-424e-b796-ec765b13c788" InformativeScreenshot="81482a8f24868a5620c725f0cedfa901.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Peluquería Easy Look (Las Tablas) - Google Maps' /&gt;" Version="V6" WaitForReadyArgument="Interactive" />
                         </uix:NGetAttributeGeneric.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetAttributeGeneric>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Detalles'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,194" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
+                      <Assign DisplayName="Añadir tiempo de la ruta" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_23">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[Ruta("Tiempo")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Tiempo]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Detalles'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/Restaurante+Filand%C3%B3n,+Carr.+de+El+Pardo+a+Fuencarral,+Km.+1.9,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5222894,-3.7108894,13z/data=!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd4180ead314deb5:0x996d1243c6e0a63e!2m2!1d-3.7167329!2d40.5047655!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="4507dba8-469a-4635-8476-ab78a06810d9" CvTextArea="190, 835, 68, 17" CvTextArgument="Detalles" CvType="Text" DesignTimeRectangle="192, 834, 67, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='section-directions-trip-details-msg-0' tag='SPAN' type='' class='' aaname='Detalles' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Detalles' /&gt;" Guid="354d95c2-05f0-45e1-a855-0b9b113261ff" InformativeScreenshot="cec200301dd536cc7580be9f81ee3620.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CVScreenId="4507dba8-469a-4635-8476-ab78a06810d9" DesignTimeRectangle="177, 816, 97, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='section-directions-trip-details-msg-0' tag='BUTTON' /&gt;" Guid="f37ca808-a5c8-46c1-8aa5-502bbef4eb4a" SearchSteps="Selector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NClick>
-                      <uix:NGetText DelayAfter="1" DelayBefore="1" DisplayName="Obtener etiqueta distancia" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,143" sap2010:WorkflowViewState.IdRef="NGetText_7" OutUiElement="[UiElementDistancia]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" ScrapingOptions="None" Timeout="5" Version="V5">
+                      <uix:NGetText DelayAfter="1" DelayBefore="1" DisplayName="Obtener etiqueta distancia" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="NGetText_7" OutUiElement="[UiElementDistancia]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" ScrapingOptions="None" Timeout="5" Version="V5">
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/Restaurante+Filand%C3%B3n,+Carr.+de+El+Pardo+a+Fuencarral,+Km.+1.9,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5222894,-3.7108894,13z/am=t/data=!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd4180ead314deb5:0x996d1243c6e0a63e!2m2!1d-3.7167329!2d40.5047655!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="93e58388-bbd7-48a2-a3b2-5e5cca2adf7b" CvType="AnyWordGroup" DesignTimeRectangle="212, 341, 118, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='hPzYFf' tag='SPAN' /&gt;" Guid="0bede1e6-7d8f-478f-8a7c-f137a5571190" InformativeScreenshot="f67547bb8dcaa031cba3018ef99d345d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CVScreenId="93e58388-bbd7-48a2-a3b2-5e5cca2adf7b" CvTextArea="127, 345, 79, 23" CvTextArgument="31 min" CvType="Text" DesignTimeRectangle="129, 341, 77, 35" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='31 min' tag='SPAN' type='' class='tb1TXc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='31 min' /&gt;" Guid="24c04dfc-a1f0-4c55-9ede-77570df33c0d" SearchSteps="FuzzySelector, CV" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NGetText.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
-                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DelayAfter="1" DisplayName="Obtener distancia" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,238" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" InUiElement="[UiElementDistancia]" Result="[Distancia]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
+                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DelayAfter="1" DisplayName="Obtener distancia" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" InUiElement="[UiElementDistancia]" Result="[Distancia]" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Version="V5">
                         <uix:NGetAttributeGeneric.Target>
                           <uix:TargetAnchorable BrowserURL="google.com/maps/place/Peluquer%C3%ADa+Easy+Look+(Las+Tablas)/@40.5054645,-3.7033657,13z/data=!4m10!1m2!2m1!1speluqueria+alcobendas!3m6!1s0xd422b6c3b9e92ad:0x4dcd5bec42c1d90e!8m2!3d40.5024679!4d-3.6761276!15sChVwZWx1cXVlcmlhIGFsY29iZW5kYXNaFyIVcGVsdXF1ZXJpYSBhbGNvYmVuZGFzkgESdW5pc2V4X2hhaXJkcmVzc2VymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5QTkZwSFMzVlJSUkFC4AEA-gEECAAQOw!16s%2Fg%2F11twqg3_1_" CVScreenId="a06fa9f5-6539-48eb-b98c-935ef1d5c09a" CvTextArea="532, 448, 325, 24" CvTextArgument="Peluqueria Easy Look (Las Tablas)" CvType="Text" DesignTimeRectangle="532, 445, 354, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='3' tag='H1' /&gt;" Guid="336b7636-2c96-424e-b796-ec765b13c788" InformativeScreenshot="81482a8f24868a5620c725f0cedfa901.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Peluquería Easy Look (Las Tablas) - Google Maps' /&gt;" Version="V6" WaitForReadyArgument="Interactive" />
                         </uix:NGetAttributeGeneric.Target>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetAttributeGeneric>
-                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="486,175" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign DisplayName="Formatear distancia" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_22">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[DistanciaLimpia]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Distancia, "[\d,]+").Value]</InArgument>
                         </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="486,123" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;Distiancia: &quot; + DistanciaLimpia + &quot; Tiempo de viaje: &quot; + Tiempo]" />
-                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Volvemos a la página de como llegar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Shortcuts="[d(hk)][d(alt)][k(Left)][u(alt)][u(hk)]" Version="V5">
+                      <Assign DisplayName="Añadir tiempo de la ruta" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_24">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[Ruta("Distancia")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Double">[CDbl(DistanciaLimpia.Replace(",", CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator).Replace(" ", ""))]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_25">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Double">[DistanciaDouble]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Double">[CDbl(DistanciaLimpia.Replace(",", CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator).Replace(" ", ""))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;Distancia: &quot; + DistanciaLimpia + &quot; Tiempo de viaje: &quot; + Tiempo + &quot; &quot; + DistanciaDouble.ToString]" />
+                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Volvemos a la página de como llegar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="b46b870c-a356-4428-9a92-b180fd4a42ab" Shortcuts="[d(hk)][d(alt)][k(Left)][u(alt)][u(hk)]" Version="V5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -408,7 +480,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NKeyboardShortcuts>
-                      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="486,356" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_15">
                         <ui:CommentOut.Body>
                           <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_52">
                             <sap:WorkflowViewStateService.ViewState>
@@ -420,7 +492,7 @@
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/@40.5314763,-3.7026211,13z/am=t/data=!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe4970ca3f:0x192a888d7366a85!2m2!1d-3.7043174!2d40.5377446!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="d7bd80f9-f82a-4400-92f5-ed2d6ba2c628" CvElementArea="122, 245, 31, 29" CvType="Icon" DesignTimeRectangle="122, 243, 34, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='' tag='SPAN' type='' class='google-symbols G47vBd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="f4aa2d78-76cf-448c-aa7d-2236b6e7beee" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADUSURBVFhH7dZdCoQgFIbhdtIugq7apFFbahVeCy5BOsMXdPMNNmpzchh84UCE1EM/YCc/UscnatUgXINw/wHZ913WdT0Gx3cqhuDGy7JI3/fHGGMkhMDLkiuCMGKaJrHW8rKssiEaCJQF0UKgZIgmAiVBtBHoI+QJBLqEMGIYBtm2TZxz2eO9v/y9oxBG3J1xHA9QrCgE+nme3y5YOsUQxE+lyqs5Y0yVj/XsCUwSBGljkiFIE5MFQVqYbAjSwBRBEGOqbIzOgKm+Vfx2DcI1CNcg3Avu4/zhKnMDAAAAAABJRU5ErkJggg==" InformativeScreenshot="7d2aac7d8e1c93920da911a1bfa87fd2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target CVScreenId="d7bd80f9-f82a-4400-92f5-ed2d6ba2c628" CvElementArea="122, 245, 31, 29" CvType="Icon" DesignTimeRectangle="124, 245, 30, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='Atrás' tag='BUTTON' type='' class='ysKsp' aaname='' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='' /&gt;" Guid="6bf2b38c-dcf7-4d1a-9a14-b91607bbd227" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADUSURBVFhH7dZdCoQgFIbhdtIugq7apFFbahVeCy5BOsMXdPMNNmpzchh84UCE1EM/YCc/UscnatUgXINw/wHZ913WdT0Gx3cqhuDGy7JI3/fHGGMkhMDLkiuCMGKaJrHW8rKssiEaCJQF0UKgZIgmAiVBtBHoI+QJBLqEMGIYBtm2TZxz2eO9v/y9oxBG3J1xHA9QrCgE+nme3y5YOsUQxE+lyqs5Y0yVj/XsCUwSBGljkiFIE5MFQVqYbAjSwBRBEGOqbIzOgKm+Vfx2DcI1CNcg3Avu4/zhKnMDAAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -429,8 +501,15 @@
                             </uix:NClick>
                           </Sequence>
                         </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="486,170" sap2010:WorkflowViewState.IdRef="Assign_21">
+                      <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[ListadoDirecciones]" DisplayName="Escribir libro de intervalo" sap:VirtualizedContainerService.HintSize="416,152" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="HipicasMadridNorte" WorkbookPath="[ArchivoDirecciones]" />
+                      <Assign DisplayName="Establecer valor de variable" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_21">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[IndiceBusqueda]</OutArgument>
                         </Assign.To>
@@ -448,7 +527,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="522,52" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+              <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="452,48" sap2010:WorkflowViewState.IdRef="CommentOut_14">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="594,5559" sap2010:WorkflowViewState.IdRef="Sequence_49">
                     <sap:WorkflowViewStateService.ViewState>
@@ -1167,15 +1246,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="558,447" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="590,1284" sap2010:WorkflowViewState.IdRef="CommentOut_5">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="484,305" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="554,1182" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="ETL" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="ETL" sap:VirtualizedContainerService.HintSize="520,1122" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd2:DataTable" Name="ListadoPisosFiltrados" />
                 <Variable x:TypeArguments="sd2:DataTable" Name="ListadoPisosOrdenados" />
@@ -1186,163 +1265,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[TablaPisos]" DisplayName="Transformamos los datos de los Pisos" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                <ui:ForEachRow.Body>
-                  <ActivityAction x:TypeArguments="sd2:DataRow">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="Piso" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="520,2009" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="Descripcion" />
-                      </Sequence.Variables>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Tratamos: &quot; + Piso(&quot;Descripción Inmueble&quot;).ToString]" />
-                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Habitaciones: &quot; + Piso(&quot;Habitaciones&quot;).ToString]" />
-                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Superficie: &quot; + Piso(&quot;Superficie&quot;).ToString]" />
-                      </Sequence>
-                      <Assign DisplayName="Establecer Descripcion" sap:VirtualizedContainerService.HintSize="486,179" sap2010:WorkflowViewState.IdRef="Assign_4">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Descripcion]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Piso("Descripción Inmueble").ToString]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="486,341" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                        <ui:CommentOut.Body>
-                          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Establecer Precio" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_1">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Double">[Precio]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Double">[convert.ToDouble(Piso("Precio").ToString.Replace("€","").Replace(".",""))]</InArgument>
-                              </Assign.Value>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </Assign>
-                          </Sequence>
-                        </ui:CommentOut.Body>
-                      </ui:CommentOut>
-                      <Assign DisplayName="Establecer Precio" sap:VirtualizedContainerService.HintSize="486,179" sap2010:WorkflowViewState.IdRef="Assign_8">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Double">[Precio]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Double">[convert.ToDouble(Piso("Precio").ToString.Split("€"c)(0).Replace(".",""))]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <If Condition="[Piso(&quot;Habitaciones&quot;).ToString.Split(&quot; &quot;c)(1).Contains(&quot;hab&quot;)]" DisplayName="If controla si hay habitaciones" sap:VirtualizedContainerService.HintSize="486,969" sap2010:WorkflowViewState.IdRef="If_1">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,413" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Establecer Superficie" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_6">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[Superficie]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Superficie").ToString.Split(" "c)(0).Trim)]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <Assign DisplayName="Establecer Habitaciones" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_5">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[Habitaciones]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Habitaciones").ToString.Split(" "c)(0).Trim)]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,413" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Establecer Superficie" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_3">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[Superficie]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Habitaciones").ToString.Split(" "c)(0).Trim)]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <Assign DisplayName="Establecer Habitaciones" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_2">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[Habitaciones]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[new Object(){Descripcion,Precio,Habitaciones,Superficie}]" DataTable="[ListadoNegocios]" DisplayName="Añadir fila de datos" sap:VirtualizedContainerService.HintSize="486,216" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:AddDataRow>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ForEachRow.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:ForEachRow>
-              <ui:FilterDataTable DataTable="[ListadoNegocios]" DisplayName="Filtrar tabla de datos" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ListadoPisosFiltrados]" SelectColumnsMode="Remove">
+              <ui:FilterDataTable DataTable="[ListadoNegocios]" DisplayName="Filtrar tabla de datos" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[ListadoPisosFiltrados]" SelectColumnsMode="Remove">
                 <ui:FilterDataTable.Filters>
                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                     <ui:FilterOperationArgument BooleanOperator="And" Operator="LT">
@@ -1367,7 +1290,214 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:FilterDataTable>
-              <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Precio" DataTable="[ListadoPisosFiltrados]" DisplayName="Ordenar tabla de datos" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="SortDataTable_1" OutputDataTable="[ListadoPisosOrdenados]" SortOrder="Ascending">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[TablaPisos]" DisplayName="Transformamos los datos de los Pisos" sap:VirtualizedContainerService.HintSize="486,934" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd2:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="Piso" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="484,752" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Descripcion" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Escribimos logs datos obtenidos" sap:VirtualizedContainerService.HintSize="450,274" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Tratamos: &quot; + Piso(&quot;Descripción Inmueble&quot;).ToString]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </WriteLine>
+                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Habitaciones: &quot; + Piso(&quot;Habitaciones&quot;).ToString]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </WriteLine>
+                        <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;Superficie: &quot; + Piso(&quot;Superficie&quot;).ToString]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </WriteLine>
+                      </Sequence>
+                      <Assign DisplayName="Establecer Descripcion" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Descripcion]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Piso("Descripción Inmueble").ToString]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Establecer Precio" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[Precio]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[convert.ToDouble(Piso("Precio").ToString.Replace("€","").Replace(".",""))]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <Assign DisplayName="Establecer Precio" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="Assign_8">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Double">[Precio]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Double">[convert.ToDouble(Piso("Precio").ToString.Split("€"c)(0).Replace(".",""))]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <If Condition="[Piso(&quot;Habitaciones&quot;).ToString.Split(&quot; &quot;c)(1).Contains(&quot;hab&quot;)]" DisplayName="If controla si hay habitaciones" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Establecer Superficie" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[Superficie]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Superficie").ToString.Split(" "c)(0).Trim)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <Assign DisplayName="Establecer Habitaciones" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[Habitaciones]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Habitaciones").ToString.Split(" "c)(0).Trim)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Establecer Superficie" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[Superficie]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[Cint(Piso("Habitaciones").ToString.Split(" "c)(0).Trim)]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <Assign DisplayName="Establecer Habitaciones" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[Habitaciones]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[new Object(){Descripcion,Precio,Habitaciones,Superficie}]" DataTable="[ListadoNegocios]" DisplayName="Añadir fila de datos" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:AddDataRow>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+              <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Precio" DataTable="[ListadoPisosFiltrados]" DisplayName="Ordenar tabla de datos" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="SortDataTable_1" OutputDataTable="[ListadoPisosOrdenados]" SortOrder="Ascending">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
