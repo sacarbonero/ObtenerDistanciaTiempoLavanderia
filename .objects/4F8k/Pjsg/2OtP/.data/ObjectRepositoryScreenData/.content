@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="ArvIBFP4xESI1ru-VumhSg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" Selector="&lt;html app='chrome.exe' title='Ykono Hair Studio - Google Maps' /&gt;" Url="google.com/maps/place/Ykono+Hair+Studio/@40.5055803,-3.7033657,13z/data=!4m9!1m2!2m1!1sPeluqueria+alcobendas!3m5!1s0xd422d97b55a9f5f:0x13eb334c33c27b2c!8m2!3d40.5363001!4d-3.6362677!16s%2Fg%2F11whf2b3dy" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

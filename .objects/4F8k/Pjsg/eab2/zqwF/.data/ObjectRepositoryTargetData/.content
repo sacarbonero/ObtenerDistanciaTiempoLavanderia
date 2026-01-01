@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="p4YvkOpu3kmKLLfHI5P3pw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/H%C3%ADpica+Prado+de+Vi%C3%B1uelas,+antigua,+Carr.+de+Burgos,+km+22,+300,+28702,+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5582619,-3.6553977,13z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422da0f047c82b:0xcdcc589efaa3740b!2m2!1d-3.5887388!2d40.5740016!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="e468018d-8e82-4888-aee1-85b8d7d951da" CvType="AnyWordGroup" DesignTimeRectangle="517, 736, 62, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='29 min' parentid='section-directions-trip-0' tag='DIV' /&gt;" Guid="f7ba09e2-5ac9-44f5-9bf2-693a54783376" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ea52fdfa9e49fa2110e64e75b2b5d9b3.png" xmlns="">0-ruhEv9aNk2vExoWCVHX_Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

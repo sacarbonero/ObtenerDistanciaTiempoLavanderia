@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Añadir destino",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "Hs8IAhQsAE6br46yFMb1Pg",
+  "Reference": "MhO8ZNPxh0ip9KbNq3bQ5Q/Hs8IAhQsAE6br46yFMb1Pg",
+  "ParentRef": "MhO8ZNPxh0ip9KbNq3bQ5Q/XYN5GmJObUuVEBHUdg47uw",
+  "Created": "2025-12-31T16:53:47.4336613Z",
+  "Updated": "2025-12-31T16:53:47.4336613Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

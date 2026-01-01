@@ -1,0 +1,13 @@
+﻿{
+  "Name": "peluqueria alcobendas -…",
+  "Type": "Element",
+  "Id": "qgyNkbsYJ0u8rl05b50T0w",
+  "Reference": "MhO8ZNPxh0ip9KbNq3bQ5Q/qgyNkbsYJ0u8rl05b50T0w",
+  "ParentRef": "MhO8ZNPxh0ip9KbNq3bQ5Q/5wFauY1gWkeOZ55x_OHlyw",
+  "Created": "2025-12-28T23:01:34.7824507Z",
+  "Updated": "2025-12-28T23:01:34.7824507Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

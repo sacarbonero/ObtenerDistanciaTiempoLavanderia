@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AVg7RN8wbUmBD-ef1XBA1w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/search/peluqueria+alcobendas/@40.5054645,-3.7033657,13z/data=!3m1!4b1" DesignTimeRectangle="80, 201, 408, 802" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='feed' tag='DIV' /&gt;" Guid="13d65b3c-0132-40cd-87ab-103d00afd7e8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='peluqueria alcobendas - Google Maps' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ce4715973fbf705a3607ba0c7c58bdc1.png" xmlns="">0Ypvoyis7C0SMqpqaV1Wxxw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScroll</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

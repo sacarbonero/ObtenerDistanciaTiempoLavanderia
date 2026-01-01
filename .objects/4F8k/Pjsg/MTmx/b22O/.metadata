@@ -1,0 +1,13 @@
+﻿{
+  "Name": "ValoraciónHorarioTod…",
+  "Type": "Element",
+  "Id": "b22OfgH33kWRWiWitCXLew",
+  "Reference": "MhO8ZNPxh0ip9KbNq3bQ5Q/b22OfgH33kWRWiWitCXLew",
+  "ParentRef": "MhO8ZNPxh0ip9KbNq3bQ5Q/MTmxFeTMJk2ROG58r3DQ5Q",
+  "Created": "2025-12-28T23:10:07.7255052Z",
+  "Updated": "2025-12-28T23:10:07.7255052Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

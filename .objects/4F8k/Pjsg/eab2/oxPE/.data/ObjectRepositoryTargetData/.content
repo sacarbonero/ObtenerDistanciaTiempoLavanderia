@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wfLupw40z0qSj7laZpowWA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/Restaurante+Filand%C3%B3n,+Carr.+de+El+Pardo+a+Fuencarral,+Km.+1.9,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5222894,-3.7108894,13z/am=t/data=!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd4180ead314deb5:0x996d1243c6e0a63e!2m2!1d-3.7167329!2d40.5047655!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="9506a37b-5be2-4ea1-b748-30fc82f14721" CvElementArea="123, 245, 30, 29" CvType="Icon" DesignTimeRectangle="122, 243, 34, 34" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='' tag='SPAN' type='' class='google-symbols G47vBd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="395c07d7-4cc8-4cb7-9617-62109129532b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADUSURBVFhH7dZdCoQgFIbhdtIugq7apFFbahVeCy5BOsMXdPMNNmpzchh84UCE1EM/YCc/UscnatUgXINw/wHZ913WdT0Gx3cqhuDGy7JI3/fHGGMkhMDLkiuCMGKaJrHW8rKssiEaCJQF0UKgZIgmAiVBtBHoI+QJBLqEMGIYBtm2TZxz2eO9v/y9oxBG3J1xHA9QrCgE+nme3y5YOsUQxE+lyqs5Y0yVj/XsCUwSBGljkiFIE5MFQVqYbAjSwBRBEGOqbIzOgKm+Vfx2DcI1CNcg3Avu4/zhKnMDAAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9506a37b-5be2-4ea1-b748-30fc82f14721" DesignTimeRectangle="124, 245, 30, 30" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='' tag='SPAN' /&gt;" Guid="701e4d9c-a867-44f2-8f98-a2adbdf83917" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="4" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="ff6430eb5f58c9ffc66bf81b61e5be1a.png" xmlns="">06Eov2u1unUybvEcxa5WqBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

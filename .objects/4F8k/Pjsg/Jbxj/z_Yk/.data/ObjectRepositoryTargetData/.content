@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NU1gwpQdC0mOcUwYy1LLYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/place/Lavander%C3%ADa+en+Alcobendas+Lavandi/@40.5436061,-3.6598511,15z/data=!4m10!1m2!2m1!1slavander%C3%ADa+alcobendas!3m6!1s0xd422cec676fd7eb:0xfc677f0c63137754!8m2!3d40.5509852!4d-3.6391475!15sChZsYXZhbmRlcsOtYSBhbGNvYmVuZGFzWhgiFmxhdmFuZGVyw61hIGFsY29iZW5kYXOSAQpsYXVuZHJvbWF0mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5XTlY5TVYweEJFQUXgAQD6AQQIABAp!16s%2Fg%2F11cs2wxzk_" CVScreenId="2e969c39-8992-416a-82c8-df5f113b964f" CvType="AnyWordGroup" DesignTimeRectangle="532, 497, 354, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl idx='3' tag='H1' /&gt;" Guid="26815d3b-0321-4755-9bb1-8beeb279af2b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lavandería en Alcobendas Lavandi - Google Maps' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="18c8095f97bae2253ce883bc99ff874c.png" xmlns="">0Y59ydulsakCNUbyDFHPwFw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

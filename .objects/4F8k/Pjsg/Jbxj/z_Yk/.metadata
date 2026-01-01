@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Lavandería en Alcobenda…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "z_Yk1VCyr0KtbSmMMikJYQ",
+  "Reference": "MhO8ZNPxh0ip9KbNq3bQ5Q/z_Yk1VCyr0KtbSmMMikJYQ",
+  "ParentRef": "MhO8ZNPxh0ip9KbNq3bQ5Q/Jbxj3bBGTUWNIys_D_LExQ",
+  "Created": "2025-12-28T16:15:54.7278247Z",
+  "Updated": "2025-12-28T16:15:54.7278247Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

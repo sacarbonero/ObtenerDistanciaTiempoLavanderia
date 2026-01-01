@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8ojKFIeXlEOMu5u1n_CHpg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5314763,-3.7026211,13z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe4970ca3f:0x192a888d7366a85!2m2!1d-3.7043174!2d40.5377446!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="01221145-be7a-4858-87bc-7f551a7848fb" CvTextArea="189, 395, 288, 17" CvTextArgument="Cam. Sotillo, 22, Fuencarral-El Pardd" CvType="Text" DesignTimeRectangle="189, 390, 288, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-label='Destino Cam. Sotillo, 22, Fuencarral-El Pardo, 28049 Madrid' tag='INPUT' type='' class='tactile-searchbox-input' aaname='' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="05bb7953-6405-40bd-9f76-cef9fde41c35" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="01221145-be7a-4858-87bc-7f551a7848fb" CvTextArea="134, 394, 18, 18" CvTextArgument="O" CvType="Text" DesignTimeRectangle="129, 396, 30, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='' type='' tag='SPAN' class='lECG9c M3KnKf google-symbols' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='' /&gt;" Guid="eab947ae-f96a-4533-8184-73493a3ad437" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0b0acfd8cf043f010274d98e1ba1c885.png" xmlns="">0ZPLHwHFmg0KrsLgcVtl8kQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

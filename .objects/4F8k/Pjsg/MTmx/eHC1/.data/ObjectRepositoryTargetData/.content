@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GE256KQLwECFmpTunqeSXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/search/peluqueria+alcobendas/@40.5054645,-3.7033657,13z/data=!3m1!4b1" DesignTimeRectangle="80, 201, 408, 802" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='feed' tag='DIV' /&gt;" Guid="2d3cc22e-437c-4458-a4a7-e50ae6b477fb" ScopeSelectorArgument="&lt;html app='chrome.exe' title='peluqueria alcobendas - Google Maps' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6acc190b868961157237b398294a3a1f.png" xmlns="">06wbqMqGJ3kCGIQjNiPlaOw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

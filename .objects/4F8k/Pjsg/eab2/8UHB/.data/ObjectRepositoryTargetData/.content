@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aIcjpcS5tUGNrgl2nEUptA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/H%C3%ADpica+Prado+de+Vi%C3%B1uelas,+antigua,+Carr.+de+Burgos,+km+22,+300,+28702,+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5582619,-3.6553977,13z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422da0f047c82b:0xcdcc589efaa3740b!2m2!1d-3.5887388!2d40.5740016!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="e468018d-8e82-4888-aee1-85b8d7d951da" CvType="AnyWordGroup" DesignTimeRectangle="189, 736, 390, 140" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='section-directions-trip-0' tag='DIV' type='' class='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="db136399-a988-4017-b246-f18531b58559" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e468018d-8e82-4888-aee1-85b8d7d951da" CvTextArea="519, 767, 60, 19" CvTextArgument="18,7 km" CvType="Text" DesignTimeRectangle="517, 766, 62, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='18,7 km' parentid='section-directions-trip-0' tag='DIV' /&gt;" Guid="59e71e91-8e80-4d09-9268-bfbfdcc45f29" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="241a5b47900bbefef52ad63a601cf157.png" xmlns="">0-tKZokJY5UeuBGsnp4C5Rg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

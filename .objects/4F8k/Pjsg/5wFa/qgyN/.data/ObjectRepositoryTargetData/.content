@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rnEvMfuVHUqSWGUNKKiLOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/search/peluqueria+alcobendas/@40.5054645,-3.7033657,13z/data=!3m1!4b1" DesignTimeRectangle="0, 0, 1936, 1048" Guid="a2da00ca-7a29-433e-9123-6916ca68a53d" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='peluqueria alcobendas - Google Maps - Google Chrome' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a81efeecc1e44062ed28e044c557340d.png" xmlns="">09cAxOSb1-kqmo4w9U1zcqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">WindowOperations</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

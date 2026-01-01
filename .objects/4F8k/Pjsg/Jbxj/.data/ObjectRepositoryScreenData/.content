@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="_ah1bEZ_iEObitTokMoeKQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" Selector="&lt;html app='chrome.exe' title='Lavandería en Alcobendas Lavandi - Google Maps' /&gt;" Url="google.com/maps/place/Lavander%C3%ADa+en+Alcobendas+Lavandi/@40.5436061,-3.6598511,15z/data=!4m10!1m2!2m1!1slavander%C3%ADa+alcobendas!3m6!1s0xd422cec676fd7eb:0xfc677f0c63137754!8m2!3d40.5509852!4d-3.6391475!15sChZsYXZhbmRlcsOtYSBhbGNvYmVuZGFzWhgiFmxhdmFuZGVyw61hIGFsY29iZW5kYXOSAQpsYXVuZHJvbWF0mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5XTlY5TVYweEJFQUXgAQD6AQQIABAp!16s%2Fg%2F11cs2wxzk_" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

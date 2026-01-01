@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="S3cVrSyutkmbnJEPkZ8z6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/place/Ykono+Hair+Studio/@40.5055803,-3.7033657,13z/data=!4m9!1m2!2m1!1sPeluqueria+alcobendas!3m5!1s0xd422d97b55a9f5f:0x13eb334c33c27b2c!8m2!3d40.5363001!4d-3.6362677!16s%2Fg%2F11whf2b3dy" CVScreenId="6874e018-c719-4e4f-91e7-bd4388b915b7" DesignTimeRectangle="532, 469, 354, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1' idx='3' tag='H1' /&gt;" Guid="dd0ccb10-0c76-447a-81e1-7d5fd9b6a4c5" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ykono Hair Studio - Google Maps' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0f3862b7e435fa4809b21fe715b74add.png" xmlns="">0HqJfE57TmUeClb-ho6y6CA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

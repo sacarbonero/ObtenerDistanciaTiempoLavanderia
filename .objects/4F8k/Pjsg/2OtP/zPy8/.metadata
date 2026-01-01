@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Ykono Hair Studio",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "zPy8JDlzqUGB30fN_UYguw",
+  "Reference": "MhO8ZNPxh0ip9KbNq3bQ5Q/zPy8JDlzqUGB30fN_UYguw",
+  "ParentRef": "MhO8ZNPxh0ip9KbNq3bQ5Q/2OtP_8XCZ0upSAhHNw0BVw",
+  "Created": "2025-12-28T18:45:51.3974975Z",
+  "Updated": "2025-12-28T18:45:51.3974975Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

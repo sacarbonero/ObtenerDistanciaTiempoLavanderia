@@ -1,0 +1,6 @@
+{
+  "Name": "ObtenerDistanciaTiempo",
+  "ProjectType": "Process",
+  "Description": "Robot atendido. Calcula la distancia y el tiempo en google maps, entre Direccion y Origen de una hoja excel",
+  "MainFile": "Main.xaml"
+}

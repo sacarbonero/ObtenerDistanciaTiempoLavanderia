@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3y14AynLskOIJ12rXjaTlg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+Calle+de+Ruperto+Chap%C3%AD,+LOCAL,+Alcobendas/La+Ponderosa,+Cam.+Sotillo,+22,+Fuencarral-El+Pardo,+28049+Madrid/@40.5319762,-3.6925006,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd422afe5269b8cb:0xbb98f7b39f4fc42c!2m2!1d-3.7049603!2d40.5376385!3e0" CVScreenId="f4989f20-4f1e-43c7-8d33-5748d37a772e" CvTextArea="150, 365, 100, 14" CvTextArgument="Añadir destino" CvType="Text" DesignTimeRectangle="152, 364, 98, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Añadir destino' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Añadir destino' /&gt;" Guid="5ded4d1a-3d3e-4963-acb0-64c3f83d062e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a La Ponderosa - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f4989f20-4f1e-43c7-8d33-5748d37a772e" CvTextArea="109, 365, 141, 14" CvTextArgument="+ Añadir destino" CvType="Text" DesignTimeRectangle="80, 353, 408, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Añadir destino' tag='BUTTON' type='' class='fC7rrc xiw3Pd' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='&amp;#xA;Añadir destino' /&gt;" Guid="0b87ea19-3ca5-462b-9db9-4af37759a155" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e2905d7601d9cd348e565e9600d825df.png" xmlns="">0Q3zQo65kDU6t19klo87ALA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

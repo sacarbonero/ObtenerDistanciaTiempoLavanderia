@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aiu9dxM3D0yNNPMnBhc5jA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/maps/dir/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/Restaurante+Filand%C3%B3n,+Carr.+de+El+Pardo+a+Fuencarral,+Km.+1.9,+Fuencarral-El+Pardo,+28049+Madrid/Lavanderia+Bloomest+Alcobendas+Norte,+C.+de+Ruperto+Chap%C3%AD,+57,+LOCAL,+28100+Alcobendas,+Madrid/@40.5222894,-3.7108894,13z/data=!4m20!4m19!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!1m5!1m1!1s0xd4180ead314deb5:0x996d1243c6e0a63e!2m2!1d-3.7167329!2d40.5047655!1m5!1m1!1s0xd422ced0bc7afe5:0x613e350b96fc135c!2m2!1d-3.6394627!2d40.5485694!3e0" CVScreenId="4507dba8-469a-4635-8476-ab78a06810d9" CvTextArea="190, 835, 68, 17" CvTextArgument="Detalles" CvType="Text" DesignTimeRectangle="192, 834, 67, 25" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='section-directions-trip-details-msg-0' tag='SPAN' type='' class='' aaname='Detalles' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Detalles' /&gt;" Guid="354d95c2-05f0-45e1-a855-0b9b113261ff" ScopeSelectorArgument="&lt;html app='chrome.exe' title='de Lavanderia Bloomest Alcobendas Norte a Lavanderia Bloomest Alcobendas Norte - Google Maps' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="4507dba8-469a-4635-8476-ab78a06810d9" DesignTimeRectangle="177, 816, 97, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='section-directions-trip-details-msg-0' tag='BUTTON' /&gt;" Guid="f37ca808-a5c8-46c1-8aa5-502bbef4eb4a" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="cec200301dd536cc7580be9f81ee3620.png" xmlns="">0gHwL7_4LO0apIMKI1YMcUQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
